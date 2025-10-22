@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SAMIR MANI KAISER</title>
+  <meta name="description" content="Portfolio of SAMIR MANI KAISER – research interests, skills, and projects." />
+  <meta property="og:title" content="SAMIR MANI KAISER" />
+  <meta property="og:description" content="Research interests, skills, projects, and publications." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Tailwind CSS (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Tailwind config: enable dark mode via class
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ["IBM Plex Sans", "system-ui", "-apple-system", "Segoe UI", "Roboto", "Ubuntu", "Cantarell", "Noto Sans", "Helvetica Neue", "Arial", "sans-serif"],
+            mono: ["IBM Plex Mono", "SFMono-Regular", "Menlo", "Monaco", "Consolas", "Liberation Mono", "monospace"]
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Your external CSS -->
+  <link rel="stylesheet" href="style.css">
+
+    <!-- Favicon -->
+    <link
+    rel="icon"
+    href="data:image/svg+xml,
+    <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
+        <circle cx='50' cy='50' r='48' stroke='black' stroke-width='2.5' fill='white'/>
+    <text x='50' y='61' font-size='46' font-family='sans-serif' font-weight='bold' text-anchor='middle' fill='black'>SMK</text>
+    </svg>"
+    />
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Samir Mani Kaiser",
+    "jobTitle": "Mathematics M.Sc.",
+    "email": "mailto:your.email@example.com",
+    "url": "https://your-domain.com",
+    "sameAs": [
+      "https://github.com/SamirKaiser",
+      "https://scholar.google.com/citations?user=YOURID",
+      "https://www.linkedin.com/in/samir-mani-kaiser-629a29364/",
+      "https://orcid.org/0000-0000-0000-0000"
+    ]
+  }
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Professional/Scientific fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- KaTeX for math rendering (optional: use $...$ in text) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body, {delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]})"></script>
+</head>
+<body class="site-bg text-slate-900 dark:text-slate-100 antialiased">
+<!-- Put this right after <body> -->
+<div id="top"></div>
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 bg-slate-800 text-white px-3 py-2 rounded">Skip to content</a>
+
+<!-- Header / Nav -->
+<header class="sticky top-0 relative z-40 bg-white/40 dark:bg-slate-950/40 border-b border-slate-200/60 dark:border-slate-800/60">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="flex items-center justify-between h-16">
+
+<!-- SMK Logo -->
+<a id="homeLogo" href="#top" aria-label="Go to top"
+  class="flex items-center justify-center h-16 w-16 select-none transition-transform duration-300 ease-out hover:scale-110 hover:shadow-2xl">
+  <div class="flex items-center justify-center w-12 h-12 rounded-full border-2 border-black dark:border-white transition-colors duration-300">
+    <span class="text-black dark:text-white font-bold text-base tracking-tight">SMK</span>
+  </div>
+</a>
+
+
+
+
+      <!-- Desktop nav -->
+      <nav class="hidden md:flex items-center gap-6 text-slate-900 dark:text-white">
+        <a href="#about" class="hover:text-indigo-700 dark:hover:text-indigo-300">About</a>
+        <a href="#projects" class="hover:text-indigo-700 dark:hover:text-indigo-300">Projects</a>
+        <a href="#collaboration" class="hover:text-indigo-700 dark:hover:text-indigo-300">Collaboration & Get in Touch</a>
+        <!-- external links -->
+
+      </nav>
+
+      <!-- Right controls -->
+      <div class="flex items-center gap-2">
+        <!-- Icon buttons (desktop) -->
+        <a href="https://github.com/SamirKaiser" target="_blank" rel="noopener noreferrer" aria-label="GitHub"
+           class="hidden md:inline-flex items-center justify-center w-9 h-9 rounded-full border border-slate-300 dark:border-slate-700
+                  bg-white/70 dark:bg-slate-900/60 hover:bg-slate-100 dark:hover:bg-slate-800/80 text-slate-800 dark:text-slate-200">
+          <!-- GitHub icon -->
+          <svg viewBox="0 0 24 24" class="w-5 h-5" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M12 2C6.48 2 2 6.58 2 12.26c0 4.52 2.87 8.35 6.85 9.71.5.1.68-.22.68-.49
+                 0-.24-.01-.86-.01-1.69-2.78.62-3.37-1.37-3.37-1.37-.46-1.2-1.12-1.52-1.12-1.52-.92-.64.07-.63.07-.63
+                 1.02.07 1.56 1.07 1.56 1.07.9 1.58 2.36 1.12 2.94.86.09-.67.35-1.12.64-1.38-2.22-.26-4.56-1.14-4.56-5.08
+                 0-1.12.39-2.03 1.03-2.74-.1-.26-.45-1.33.1-2.78 0 0 .84-.27 2.76 1.05.8-.23 1.66-.35 2.51-.35.85 0 1.71.12 2.51.35
+                 1.92-1.32 2.76-1.05 2.76-1.05.55 1.45.2 2.52.1 2.78.64.71 1.03 1.62 1.03 2.74 0 3.95-2.34 4.82-4.57 5.08.36.32.68.94.68 1.9
+                 0 1.37-.01 2.47-.01 2.81 0 .27.18.59.69.49A10.03 10.03 0 0 0 22 12.26C22 6.58 17.52 2 12 2z"/>
+          </svg>
+        </a>
+
+        <a href="https://www.linkedin.com/in/samir-mani-kaiser-629a29364/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"
+           class="hidden md:inline-flex items-center justify-center w-9 h-9 rounded-full border border-slate-300 dark:border-slate-700
+                  bg-white/70 dark:bg-slate-900/60 hover:bg-slate-100 dark:hover:bg-slate-800/80 text-slate-800 dark:text-slate-200">
+          <!-- LinkedIn icon -->
+          <svg viewBox="0 0 24 24" class="w-5 h-5" fill="currentColor" aria-hidden="true">
+            <path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.5h4V23h-4V8.5zM8.5 8.5h3.8v2h.05c.53-1 1.84-2.05 3.79-2.05 4.05 0 4.8 2.67 4.8 6.14V23h-4v-5.9c0-1.41-.03-3.22-1.96-3.22-1.97 0-2.27 1.54-2.27 3.12V23h-4V8.5z"/>
+          </svg>
+        </a>
+
+        <!-- Theme toggle -->
+        <button id="themeToggle" type="button" aria-label="Toggle dark mode"
+          class="relative inline-flex h-8 w-14 items-center rounded-full border border-slate-300 bg-white/70 p-1 backdrop-blur transition
+                hover:bg-slate-100 dark:border-slate-700 dark:bg-slate-900/60 dark:hover:bg-slate-800/80">
+
+          <!-- Toggle thumb -->
+          <span class="absolute left-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-white shadow-sm ring-1 ring-slate-300 transition-transform
+                      dark:translate-x-6 dark:bg-slate-800 dark:ring-slate-700"></span>
+
+          <!-- Sun -->
+          <svg aria-hidden="true" viewBox="0 0 24 24"
+              class="pointer-events-none absolute left-[6px] top-1/2 -translate-y-1/2 h-4 w-4 opacity-80 transition-opacity dark:opacity-0">
+            <circle cx="12" cy="12" r="4" fill="currentColor"></circle>
+            <g stroke="currentColor" stroke-width="1.5" fill="none">
+              <line x1="12" y1="2" x2="12" y2="5" />
+              <line x1="12" y1="19" x2="12" y2="22" />
+              <line x1="2" y1="12" x2="5" y2="12" />
+              <line x1="19" y1="12" x2="22" y2="12" />
+              <line x1="4.7" y1="4.7" x2="6.9" y2="6.9" />
+              <line x1="17.1" y1="17.1" x2="19.3" y2="19.3" />
+              <line x1="4.7" y1="19.3" x2="6.9" y2="17.1" />
+              <line x1="17.1" y1="6.9" x2="19.3" y2="4.7" />
+            </g>
+          </svg>
+
+          <!-- Moon -->
+          <svg aria-hidden="true" viewBox="0 0 24 24"
+              class="pointer-events-none absolute right-[6px] top-1/2 -translate-y-1/2 h-4 w-4 opacity-0 transition-opacity dark:opacity-80">
+            <path fill="currentColor" d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+
+
+        <button id="menuBtn" class="md:hidden inline-flex items-center justify-center w-9 h-9 rounded-full border border-slate-300 dark:border-slate-700" aria-label="Open menu">☰</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950">
+    <nav class="max-w-6xl mx-auto px-4 py-3 flex flex-col gap-3">
+      <a href="#about" class="hover:text-indigo-700 dark:hover:text-indigo-300">About</a>
+      <a href="#projects" class="hover:text-indigo-700 dark:hover:text-indigo-300">Projects</a>
+      <a href="#collaboration" class="hover:text-indigo-700 dark:hover:text-indigo-300">Collaboration & Get in Touch</a>
+      <!-- external links -->
+    </nav>
+  </div>
+
+  <div id="scrollProgress" class="absolute left-0 bottom-0 h-0.5 bg-indigo-600" style="width:0%"></div>
+</header>
+
+
+  <main id="main" class="relative z-10 max-w-6xl mx-auto px-4">
+    <div class="md:col-span-4">
+      
+
+<!-- Flow — keep only the outer container (glass card) -->
+<div class="max-w-6xl mx-auto pt-10">
+  <div class="overflow-hidden rounded-3xl ring-1 ring-slate-200 dark:ring-slate-800 bg-white/25 dark:bg-slate-950/25 backdrop-blur">
+    <canvas
+      id="flow"
+      width="1152"
+      height="320"
+      class="block w-full h-auto"
+      style="background:transparent; box-shadow:none; filter:none;"
+    ></canvas>
+  </div>
+</div>
+
+
+<!-- ===================== HERO ===================== -->
+<section class="relative py-10 md:py-12 will-reveal">
+  <div class="relative overflow-hidden rounded-3xl border border-slate-200 dark:border-slate-800 
+              bg-white/25 dark:bg-slate-950/25 backdrop-blur max-w-6xl mx-auto">
+    <div class="relative grid md:grid-cols-6 gap-8 items-center p-6 md:p-8">
+      
+      <!-- Photo LEFT (round, with gallery trigger) -->
+      <div class="md:col-span-2">
+        <div
+          id="portraitGalleryTrigger"
+          class="mx-auto md:mx-0 aspect-square w-40 h-40 md:w-56 md:h-56 rounded-full overflow-hidden 
+                 bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 
+                 transition-transform duration-300 ease-out hover:scale-105 hover:shadow-xl cursor-pointer"
+        >
+          <img src="imgs/me1.jpg" alt="Portrait of Samir Mani Kaiser" class="w-full h-full object-cover"/>
+        </div>
+      </div>
+
+      <!-- Text RIGHT -->
+      <div class="md:col-span-4">
+        <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight leading-tight">SAMIR MANI KAISER</h1>
+        <p class="mt-3 text-lg md:text-xl text-slate-700 dark:text-slate-300">
+          <span class="font-semibold text-xl">Research interests:</span>
+          Machine Learning, Nonlinear Optimization and Numerical Methods for Dynamical Systems
+        </p>
+
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="#about" 
+            class="inline-flex items-center justify-center rounded-2xl px-4 py-2 border border-indigo-200 
+                    text-indigo-700 hover:bg-indigo-50 dark:border-indigo-700 dark:text-indigo-300 dark:hover:bg-indigo-900">
+            About me
+          </a>
+
+          <a href="#projects" 
+            class="inline-flex items-center justify-center rounded-2xl px-4 py-2 border border-indigo-200 
+                    text-indigo-700 hover:bg-indigo-50 dark:border-indigo-700 dark:text-indigo-300 dark:hover:bg-indigo-900">
+            See Projects
+          </a>
+
+          <a href="#collaboration"
+            class="inline-flex items-center justify-center rounded-2xl px-4 py-2 border border-indigo-200 
+                    text-indigo-700 hover:bg-indigo-50 dark:border-indigo-700 dark:text-indigo-300 dark:hover:bg-indigo-900">
+            Contact me
+          </a>
+        </div>
+
+        <!-- Info -->
+        <ul class="mt-6 flex flex-wrap gap-4 text-sm text-slate-700 dark:text-slate-300">
+          <li>Based in Berlin, Germany</li>
+          <li>Mathematics M.Sc. · Technische Universität Berlin (2025)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ===================== GALLERY MODAL ===================== -->
+<div id="heroGalleryModal"
+     class="fixed inset-0 z-50 hidden flex flex-col items-center justify-center bg-black/70 backdrop-blur-sm p-4"
+     role="dialog" aria-modal="true" aria-labelledby="heroGalleryTitle">
+
+  <div class="relative max-w-5xl w-full flex flex-col items-center">
+    <h2 id="heroGalleryTitle" class="sr-only">Portrait Gallery</h2>
+
+    <!-- Image frame -->
+    <div id="heroGalleryFrame"
+         class="w-full aspect-[16/9] flex items-center justify-center overflow-hidden rounded-2xl">
+      <img id="heroGalleryImage"
+           src=""
+           alt="Gallery photo"
+           class="rounded-2xl shadow-2xl" />
+    </div>
+
+    <!-- Static navigation buttons -->
+    <div class="mt-8 flex items-center justify-center gap-8">
+      <button id="heroPrevImage" class="hero-nav-btn">← Previous</button>
+      <button id="heroNextImage" class="hero-nav-btn">Next →</button>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+<!-- Quote -->
+<section id="quote" class="py-6 will-reveal">
+  <figure class="max-w-4xl mx-auto text-center">
+    <!-- Quote text (hover + click) -->
+    <blockquote 
+      class="text-xl md:text-2xl italic text-slate-700 dark:text-slate-300 cursor-pointer transition-transform duration-300 ease-out hover:scale-105 hover:text-indigo-600 dark:hover:text-indigo-400"
+      data-modal-open="quoteInfo"
+    >
+      “The only way to learn mathematics is to do mathematics.”
+    </blockquote>
+
+    <!-- Author name (hover + click) -->
+    <figcaption 
+      class="mt-3 text-sm md:text-base text-slate-500 cursor-pointer transition-transform duration-300 ease-out hover:scale-105 hover:text-indigo-600 dark:hover:text-indigo-400"
+      data-modal-open="quoteInfo"
+    >
+      — Paul R. Halmos
+    </figcaption>
+  </figure>
+
+  <!-- Modal (same pattern as footer) -->
+  <div id="quote-modal"
+       class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 sm:p-6 md:p-8 opacity-0 transition-opacity duration-300"
+       aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="quote-title">
+
+    <!-- overlay (click to close) -->
+    <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm" data-modal-close></div>
+
+    <!-- dialog -->
+    <div class="relative z-10 w-full max-w-xl rounded-xl bg-white p-6 shadow-2xl ring-1 ring-slate-900/10 
+                dark:bg-slate-900 dark:ring-slate-200/10 transform scale-95 transition-transform duration-300">
+      <header class="mb-4 flex items-start justify-between gap-6">
+        <h3 id="quote-title" class="text-lg font-semibold text-slate-900 dark:text-slate-100">About the Quote</h3>
+        <button class="rounded-md p-2 text-slate-500 hover:bg-slate-100 hover:text-slate-800 
+                       dark:hover:bg-slate-800 dark:hover:text-slate-200"
+                aria-label="Close" data-modal-close>✕</button>
+      </header>
+
+      <div class="prose prose-slate dark:prose-invert text-sm md:text-base max-h-[70vh] overflow-y-auto">
+        <p>
+          Paul R. Halmos (1916–2006) was a renowned Hungarian-American mathematician and educator,
+          known for his clarity of exposition and influential books such as
+          <em>Measure Theory</em> and <em>Naive Set Theory</em>.
+        </p>
+
+        <p>
+          This quote emphasizes Halmos’s belief that mathematics is best understood through active problem-solving rather than passive reading.
+          True comprehension comes from practice — “doing mathematics” — not just from observation or theory.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- About Section Animation -->
+<div id="about" class="scroll-mt-24 mt-10 md:mt-14 mb-6 flex justify-center">
+  <canvas id="AboutAnim" width="830" height="280" class="block rounded-xl"></canvas>
+</div>
+
+
+
+
+<!-- About -->
+<section class="will-reveal py-12 border-slate-200 dark:border-slate-800">
+  <h2 class="text-2xl md:text-3xl font-bold tracking-tight">About</h2>
+  <p class="mt-4 w-full max-w-none leading-relaxed text-slate-700 dark:text-slate-300">
+    I am Samir Mani Kaiser, a Master’s graduate in Mathematics at the Technical University of Berlin, specializing in numerical analysis, optimization, and machine learning. My academic background focuses on the application of mathematical methods to computational science and dynamical systems.
+  </p>
+
+  <div class="mt-6 grid md:grid-cols-2 gap-6">
+    <div class="p-5 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/25 dark:bg-slate-950/25 backdrop-blur">
+      <h3 class="font-semibold">Research Interests</h3>
+      <ul class="mt-3 list-disc list-inside text-slate-700 dark:text-slate-300 text-sm">
+        <li>Machine Learning and Neural Computation</li>
+        <li>Nonlinear Optimization and Dynamical Systems</li>
+        <li>Numerical Methods for Differential Equations</li>
+        <li>Scientific Computing and Simulation</li>
+      </ul>
+    </div>
+
+    <div class="p-5 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/25 dark:bg-slate-950/25 backdrop-blur">
+      <h3 class="font-semibold">Research & Professional Experience</h3>
+      <ul class="mt-3 list-disc list-inside text-slate-700 dark:text-slate-300 text-sm">
+        <li>Working Student – Crypto Security Management (2023–2025)</li>
+        <li>Intern – Shangri-La Development Bank, Nepal (2019)</li>
+        <li>Intern – Allianz AG, Munich (2016)</li>
+      </ul>
+    </div>
+
+    <div class="p-5 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/25 dark:bg-slate-950/25 backdrop-blur">
+      <h3 class="font-semibold">Education</h3>
+      <ul class="mt-3 list-disc list-inside text-slate-700 dark:text-slate-300 text-sm">
+        <li>M.Sc. Mathematics, TU Berlin (2022–2025)</li>
+        <li>B.Sc. Mathematics, TU Berlin (2017–2022)</li>
+        <li>Abitur, Paulsen-Gymnasium Berlin (2017)</li>
+      </ul>
+    </div>
+
+    <div class="p-5 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/25 dark:bg-slate-950/25 backdrop-blur">
+      <h3 class="font-semibold">Coursework & Certifications</h3>
+      <ul class="mt-3 list-disc list-inside text-slate-700 dark:text-slate-300 text-sm">
+        <li>Advanced Machine Learning</li>
+        <li>Optimization, Numerical Analysis, Statistical Learning Theory</li>
+        <li>BSI IT-Grundschutz Practitioner (HISolution AG)</li>
+        <li>Programming & Optimization Tools: Python, MATLAB, Rust, R, SCIP, Gurobi</li>
+      </ul>
+    </div>
+  </div>
+
+</section>
+
+<!-- Projects -->
+<section id="projects" class="scroll-mt-24 py-12  border-slate-200 dark:border-slate-800 will-reveal">
+  <div class="flex items-baseline justify-between">
+    <h2 class="text-2xl md:text-3xl font-bold tracking-tight">Projects</h2>
+  </div>
+<p class="mt-4 w-full max-w-none leading-relaxed text-slate-700 dark:text-slate-300 prose">
+I build numerical simulations, algorithms, and small tools in Python and Rust, with a focus on clear experiments and reproducible results. My interests include dynamical systems, optimization, and scientific computing, and I enjoy turning theory into hands-on benchmarks and visual analyses. Recent projects range from analog-inspired solvers and Rust-based physics simulations to mathematical explorations like resistor ladders converging to φ, π, and e. Explore the highlights below, and find all repositories and updates on
+   
+  <a href="https://github.com/SamirKaiser" target="_blank" rel="noopener noreferrer" 
+     class="text-indigo-700 dark:text-indigo-300 hover:text-indigo-500 dark:hover:text-indigo-400">
+    my GitHub
+  </a>.
+</p>
+
+
+
+
+  <div class="wrap">
+    <canvas id="hero" width="1180" height="420" aria-label="3D optimizer trajectories"></canvas>
+  </div>
+
+
+
+
+
+  <div class="mt-6 flex items-center justify-between">
+    <div class="flex items-baseline gap-3">
+      <h3 class="text-xl font-semibold">Scientific &amp; Mathematical Projects</h3>
+      <!--
+      <a href="/projects#research"
+         class="inline-flex items-center gap-1 text-sm font-medium text-indigo-700 hover:text-indigo-800 dark:text-indigo-300 dark:hover:text-indigo-200 group leading-none"
+         aria-label="See all scientific and mathematical projects">
+        <span>See all</span>
+        <span aria-hidden="true" class="inline-flex items-center justify-center w-4 h-4 transition-transform group-hover:translate-x-0.5">→</span>
+      </a>
+      -->
+    </div>
+    <div class="flex gap-2 text-sm" role="tablist" aria-label="Project categories">
+      <!-- tabs (if any) -->
+    </div>
+  </div>
+<p class="mt-4 w-full max-w-none leading-relaxed text-slate-700 dark:text-slate-300">
+  This section focuses on my scientific computing work: continuous-time analog solvers for MINLP and SAT; operator-theoretic and machine-learning methods for dynamical systems; and performance-oriented simulations in Rust (Barnes–Hut N-Body, 2D incompressible flow, Kuramoto–Sivashinsky). I emphasize stable integrators, convergence diagnostics, and uncertainty analysis—each repository includes reproducible notebooks, unit tests, and benchmark scripts. Explore selected results below; full methodology and source code are on
+  <a href="https://github.com/SamirKaiser"
+     target="_blank" rel="noopener noreferrer"
+     class="text-indigo-700 dark:text-indigo-300 hover:text-indigo-500 dark:hover:text-indigo-400 no-underline"
+     style="text-decoration: none;">
+    my GitHub
+  </a>.
+</p>
+
+
+
+  <div id="projects-research" class="relative mt-4" data-slider="research" tabindex="0">
+    <!-- Track with slides -->
+    <div class="projectsTrack overflow-x-auto scroll-smooth snap-x snap-mandatory no-scrollbar">
+      <div class="flex gap-6 pr-2">
+       <!-- Research slide 1 -->
+        <article class="min-w-[85%] sm:min-w-[420px] lg:min-w-[520px] snap-start group rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden hover:shadow-lg transition-shadow bg-white/25 dark:bg-slate-950/25 backdrop-blur">
+          <a href="https://github.com/SamirKaiser/Continuous-Time-Analog-MINLP-Solver-and-Genetic-Algorithm-Comparison"
+            target="_blank" rel="noopener noreferrer" class="block aspect-[16/9] bg-slate-100 dark:bg-slate-900">
+            <img
+              src="imgs/img_scientific_projects/Portfolio_cont_solver.png"
+              alt="Analog MINLP Solver visualization"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+          </a>
+
+          <div class="p-5">
+            <a href="https://github.com/SamirKaiser/Continuous-Time-Analog-MINLP-Solver-and-Genetic-Algorithm-Comparison"
+              target="_blank" rel="noopener noreferrer">
+              <h3 class="font-semibold group-hover:underline">
+                Continuous-Time Analog MINLP Solver &amp; GA Comparison
+              </h3>
+            </a>
+            <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">
+              Built a discrete-time analog solver for mixed-integer nonlinear programs and benchmarked it against genetic algorithms; achieved stable trajectory tracking and competitive optima on testbeds.
+            </p>
+            <div class="mt-3 flex flex-wrap gap-2 text-xs">
+              <span class="px-2 py-1 rounded-full bg-slate-100 dark:bg-slate-900">Optimization</span>
+              <span class="px-2 py-1 rounded-full bg-slate-100 dark:bg-slate-900">Python</span>
+              <span class="px-2 py-1 rounded-full bg-slate-100 dark:bg-slate-900">SciPy</span>
+            </div>
+            <div class="mt-4 flex items-center gap-4 text-sm">
+              <a class="underline underline-offset-4"
+                href="https://github.com/SamirKaiser/Continuous-Time-Analog-MINLP-Solver-and-Genetic-Algorithm-Comparison"
+                target="_blank" rel="noopener noreferrer">Code</a>
+            </div>
+          </div>
+        </article>
+
+
+
+        <!-- Research slide 2 -->
+        <article class="min-w-[85%] sm:min-w-[420px] lg:min-w-[520px] snap-start group rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden hover:shadow-lg transition-shadow bg-white/25 dark:bg-slate-950/25 backdrop-blur">
+          <a href="https://github.com/SamirKaiser/Rust-Physics-Simulations-N-Body-Fluid-Flow-and-Kuramoto-Sivashinsky-Dynamics"
+            target="_blank" rel="noopener noreferrer" class="block aspect-[16/9] bg-slate-100 dark:bg-slate-900">
+            <img
+              src="imgs/img_scientific_projects/ks_spacetime.png"
+              alt="Rust physics simulations visualization"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+          </a>
+
+          <div class="p-5">
+            <a href="https://github.com/SamirKaiser/Rust-Physics-Simulations-N-Body-Fluid-Flow-and-Kuramoto-Sivashinsky-Dynamics"
+              target="_blank" rel="noopener noreferrer">
+              <h3 class="font-semibold group-hover:underline">
+                Rust Physics Simulations: N-Body, Fluid Flow &amp; KS Dynamics
+              </h3>
+            </a>
+            <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">
+              Implemented Barnes–Hut N-Body gravity and a 2D incompressible flow solver that generates Kármán vortex streets and chaotic Kuramoto–Sivashinsky patterns with real-time rendering.
+            </p>
+            <div class="mt-3 flex flex-wrap gap-2 text-xs">
+              <span class="px-2 py-1 rounded-full bg-slate-100 dark:bg-slate-900">Rust</span>
+              <span class="px-2 py-1 rounded-full bg-slate-100 dark:bg-slate-900">Simulation</span>
+            </div>
+            <div class="mt-4 flex items-center gap-4 text-sm">
+              <a class="underline underline-offset-4"
+                href="https://github.com/SamirKaiser/Rust-Physics-Simulations-N-Body-Fluid-Flow-and-Kuramoto-Sivashinsky-Dynamics"
+                target="_blank" rel="noopener noreferrer">Code</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Research slide 3 -->
+        <article class="min-w-[85%] sm:min-w-[420px] lg:min-w-[520px] snap-start group rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden hover:shadow-lg transition-shadow bg-white/25 dark:bg-slate-950/25 backdrop-blur">
+          <a href="https://github.com/SamirKaiser/MCDM-Portfolio-Optimization-with-Genetic-Algorithms"
+            target="_blank" rel="noopener noreferrer" class="block aspect-[16/9] bg-slate-100 dark:bg-slate-900">
+            <img
+              src="imgs/img_scientific_projects/Portfolio.png"
+              alt="Portfolio optimization visualization"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+          </a>
+
+          <div class="p-5">
+            <a href="https://github.com/SamirKaiser/MCDM-Portfolio-Optimization-with-Genetic-Algorithms"
+              target="_blank" rel="noopener noreferrer">
+              <h3 class="font-semibold group-hover:underline">
+                MCDM Portfolio Optimization with Genetic Algorithms
+              </h3>
+            </a>
+            <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">
+              Extended an multi-criteria model (risk, return, ESG, diversification) and evolved Pareto-optimal portfolios with constraint handling and sensitivity analysis.
+            </p>
+            <div class="mt-3 flex flex-wrap gap-2 text-xs">
+              <span class="px-2 py-1 rounded-full bg-slate-100 dark:bg-slate-900">Python</span>
+              <span class="px-2 py-1 rounded-full bg-slate-100 dark:bg-slate-900">Genetic Algorithms</span>
+            </div>
+            <div class="mt-4 flex items-center gap-4 text-sm">
+              <a class="underline underline-offset-4"
+                href="https://github.com/SamirKaiser/MCDM-Portfolio-Optimization-with-Genetic-Algorithms"
+                target="_blank" rel="noopener noreferrer">Code</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Research slide 4 -->
+<article class="min-w-[85%] sm:min-w-[420px] lg:min-w-[520px] snap-start group rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden hover:shadow-lg transition-shadow bg-white/25 dark:bg-slate-950/25 backdrop-blur">
+  <a href="https://github.com/SamirKaiser/Operator-Theoretic-and-Machine-Learning-Approaches-to-the-Lorenz-System"
+     target="_blank" rel="noopener noreferrer" class="block aspect-[16/9] bg-slate-100 dark:bg-slate-900">
+    <img
+      src="imgs/img_scientific_projects/Lorenz_embedding.png"
+      alt="Lorenz system visualization"
+      class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+    />
+  </a>
+
+  <div class="p-5">
+    <a href="https://github.com/SamirKaiser/Operator-Theoretic-and-Machine-Learning-Approaches-to-the-Lorenz-System"
+       target="_blank" rel="noopener noreferrer">
+      <h3 class="font-semibold group-hover:underline">
+        Operator-Theoretic &amp; ML Approaches to the Lorenz System
+      </h3>
+    </a>
+    <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">
+      Explored FFT/DMD/EDMD, Takens embedding, Deep Koopman learning, and PINNs to reconstruct the attractor and compare forecast skill across methods.
+    </p>
+    <div class="mt-3 flex flex-wrap gap-2 text-xs">
+      <span class="px-2 py-1 rounded-full bg-slate-100 dark:bg-slate-900">Dynamical Systems</span>
+      <span class="px-2 py-1 rounded-full bg-slate-100 dark:bg-slate-900">Jupyter</span>
+    </div>
+    <div class="mt-4 flex items-center gap-4 text-sm">
+      <a class="underline underline-offset-4"
+         href="https://github.com/SamirKaiser/Operator-Theoretic-and-Machine-Learning-Approaches-to-the-Lorenz-System"
+         target="_blank" rel="noopener noreferrer">Code</a>
+    </div>
+  </div>
+</article>
+
+      </div>
+    </div>
+
+    <!-- Centered controls UNDER the templates (polished buttons) -->
+    <div class="mt-5 flex justify-center">
+      <div class="flex gap-3">
+
+        <!-- Prev -->
+        <button
+          class="projPrev relative inline-flex h-11 w-11 items-center justify-center rounded-full
+                 border border-slate-300/70 dark:border-slate-700/70
+                 bg-gradient-to-b from-white/70 to-white/40 dark:from-slate-900/60 dark:to-slate-900/30
+                 backdrop-blur supports-[backdrop-filter]:bg-white/30
+                 text-indigo-700 dark:text-indigo-300
+                 shadow-sm hover:shadow-md
+                 transition-[transform,box-shadow,filter] duration-200
+                 hover:saturate-125 active:scale-95
+                 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500/70"
+          aria-label="Previous project"
+          title="Previous"
+          type="button">
+          <!-- Chevron Left (SVG for crispness) -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" d="M12.78 15.53a.75.75 0 0 1-1.06 0l-4.25-4.25a.75.75 0 0 1 0-1.06l4.25-4.25a.75.75 0 1 1 1.06 1.06L8.56 10l4.22 4.22a.75.75 0 0 1 0 1.06z" clip-rule="evenodd"/>
+          </svg>
+          <!-- subtle focus ring glow -->
+          <span class="pointer-events-none absolute inset-0 rounded-full ring-1 ring-inset ring-white/50 dark:ring-slate-900/40"></span>
+        </button>
+
+        <!-- Next -->
+        <button
+          class="projNext relative inline-flex h-11 w-11 items-center justify-center rounded-full
+                 border border-slate-300/70 dark:border-slate-700/70
+                 bg-gradient-to-b from-white/70 to-white/40 dark:from-slate-900/60 dark:to-slate-900/30
+                 backdrop-blur supports-[backdrop-filter]:bg-white/30
+                 text-indigo-700 dark:text-indigo-300
+                 shadow-sm hover:shadow-md
+                 transition-[transform,box-shadow,filter] duration-200
+                 hover:saturate-125 active:scale-95
+                 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500/70"
+          aria-label="Next project"
+          title="Next"
+          type="button">
+          <!-- Chevron Right -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" d="M7.22 4.47a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 1 1-1.06-1.06L11.44 10 7.22 5.78a.75.75 0 0 1 0-1.06z" clip-rule="evenodd"/>
+          </svg>
+          <span class="pointer-events-none absolute inset-0 rounded-full ring-1 ring-inset ring-white/50 dark:ring-slate-900/40"></span>
+        </button>
+
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="center-wrap">
+    <!-- control size via data-w / data-h -->
+    <canvas id="flower" data-w="1180" data-h="360" aria-label="Lissajous Flower"></canvas>
+  </div>
+
+  <!-- === CLONED SECTION (same styling as Research) === -->
+  <section aria-labelledby="sec-hobby">
+    <!-- Header row (title + See all + optional tabs placeholder) -->
+    <div class="mt-6 flex items-center justify-between">
+      <div class="flex items-baseline gap-3">
+        <h3 id="sec-hobby" class="text-xl font-semibold">Hobby &amp; Passion Projects</h3>
+        <!--
+        <a href="/projects#hobby"
+           class="inline-flex items-center gap-1 text-sm font-medium text-indigo-700 hover:text-indigo-800 dark:text-indigo-300 dark:hover:text-indigo-200 group leading-none"
+           aria-label="See all hobby and passion projects">
+          <span>See all</span>
+          <span aria-hidden="true" class="inline-flex items-center justify-center w-4 h-4 transition-transform group-hover:translate-x-0.5">→</span>
+        </a>
+        -->
+      </div>
+      <div class="flex gap-2 text-sm" role="tablist" aria-label="Project categories">
+        <!-- tabs (if any) -->
+      </div>
+    </div>
+
+    <!-- Section blurb -->
+    <p class="mt-4 w-full max-w-none leading-relaxed text-slate-700 dark:text-slate-300">
+      I’m passionate about couple dancing, electrical engineering, applied physics, and 3D printing. I enjoy translating physical intuition into clean, testable builds—from motion-inspired experiments and sensor prototypes to compact simulations and printed mechanisms. These side projects are where I explore, learn quickly, and turn curiosity into practical, shareable tools.
+    </p>
+
+    <!-- Slider -->
+    <div id="projects-hobby" class="relative mt-4" data-slider="hobby" tabindex="0">
+      <!-- Track with slides -->
+      <div class="projectsTrack overflow-x-auto scroll-smooth snap-x snap-mandatory no-scrollbar">
+        <div class="flex gap-6 pr-2">
+          <!-- Hobby slide 1 -->
+          <article class="min-w-[85%] sm:min-w-[420px] lg:min-w-[520px] snap-start group rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden hover:shadow-lg transition-shadow bg-white/25 dark:bg-slate-950/25 backdrop-blur">
+            <a href="https://github.com/SamirKaiser/SuperTicTacToe"
+              target="_blank" rel="noopener noreferrer" class="block aspect-[16/9] overflow-hidden bg-slate-100 dark:bg-slate-900 rounded-t-2xl">
+              <img
+                src="imgs/img_hobby_projects/superTTT.png"
+                alt="Super Tic Tac Toe screenshot"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                loading="lazy"
+              />
+            </a>
+
+            <div class="p-5">
+              <a href="https://github.com/SamirKaiser/SuperTicTacToe"
+                target="_blank" rel="noopener noreferrer">
+                <h3 class="font-semibold group-hover:underline">SuperTicTacToe</h3>
+              </a>
+              <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">
+                Python-based Super Tic Tac Toe with a clean Tkinter UI—play vs. another player or AI opponent with dynamic board highlighting, instant win detection, and smooth visuals.
+              </p>
+              <div class="mt-3 flex flex-wrap gap-2 text-xs">
+                <span class="px-2 py-1 rounded-full bg-slate-100 dark:bg-slate-900">Python</span>
+                <span class="px-2 py-1 rounded-full bg-slate-100 dark:bg-slate-900">Tkinter</span>
+              </div>
+              <div class="mt-4 flex items-center gap-4 text-sm">
+                <a class="underline underline-offset-4"
+                  href="https://github.com/SamirKaiser/SuperTicTacToe"
+                  target="_blank" rel="noopener noreferrer">Code</a>
+              </div>
+            </div>
+          </article>
+
+
+          <!-- Hobby slide 2 -->
+          <article class="min-w-[85%] sm:min-w-[420px] lg:min-w-[520px] snap-start group rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden hover:shadow-lg transition-shadow bg-white/25 dark:bg-slate-950/25 backdrop-blur">
+            <a href="https://github.com/SamirKaiser/Maintaining-Energy-Flow-in-Dance-Variational-Dynamics-and-Partner-Coupling-Simulation"
+              target="_blank" rel="noopener noreferrer"
+              class="block aspect-[16/9] overflow-hidden bg-slate-100 dark:bg-slate-900 flex items-center justify-center text-3xl">
+              <img
+                src="imgs/img_hobby_projects/Spiral Partner Dance Simulation.png"
+                alt="3D partner dance energy flow simulation"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+            </a>
+
+            <div class="p-5">
+              <a href="https://github.com/SamirKaiser/Maintaining-Energy-Flow-in-Dance-Variational-Dynamics-and-Partner-Coupling-Simulation"
+                target="_blank" rel="noopener noreferrer">
+                <h3 class="font-semibold group-hover:underline">
+                  Maintaining Energy Flow in Dance (3D Simulation)
+                </h3>
+              </a>
+              <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">
+                Variational theory meets 3D simulation of leader–follower coupling—spiral partner motion with visualizations of mechanical power, energy transfer, and smooth dynamics.
+              </p>
+              <div class="mt-3 flex flex-wrap gap-2 text-xs">
+                <span class="px-2 py-1 rounded-full bg-slate-100 dark:bg-slate-900">Python</span>
+                <span class="px-2 py-1 rounded-full bg-slate-100 dark:bg-slate-900">3D</span>
+              </div>
+              <div class="mt-4 flex items-center gap-4 text-sm">
+                <a class="underline underline-offset-4"
+                  href="https://github.com/SamirKaiser/Maintaining-Energy-Flow-in-Dance-Variational-Dynamics-and-Partner-Coupling-Simulation"
+                  target="_blank" rel="noopener noreferrer">Code</a>
+              </div>
+            </div>
+          </article>
+
+
+          <!-- Hobby slide 3 -->
+          <article class="min-w-[85%] sm:min-w-[420px] lg:min-w-[520px] snap-start group rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden hover:shadow-lg transition-shadow bg-white/25 dark:bg-slate-950/25 backdrop-blur">
+            <a href="https://github.com/SamirKaiser/Resistor-Ladders-and-Continued-Fractions-The-Golden-Ratio-and-e"
+              target="_blank" rel="noopener noreferrer"
+              class="block aspect-[16/9] overflow-hidden bg-slate-100 dark:bg-slate-900 flex items-center justify-center text-3xl">
+              <img
+                src="imgs/img_hobby_projects/Noise_plot.png"
+                alt="Resistor ladders and continued fractions visualization"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+            </a>
+
+            <div class="p-5">
+              <a href="https://github.com/SamirKaiser/Resistor-Ladders-and-Continued-Fractions-The-Golden-Ratio-and-e"
+                target="_blank" rel="noopener noreferrer">
+                <h3 class="font-semibold group-hover:underline">
+                  Resistor Ladders &amp; Continued Fractions
+                </h3>
+              </a>
+              <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">
+                Math + simulation of ladder networks converging to φ, π, and e—solves Kirchhoff’s laws under tolerance noise and quantifies approximation error.
+              </p>
+              <div class="mt-3 flex flex-wrap gap-2 text-xs">
+                <span class="px-2 py-1 rounded-full bg-slate-100 dark:bg-slate-900">Python</span>
+                <span class="px-2 py-1 rounded-full bg-slate-100 dark:bg-slate-900">Circuit Theory</span>
+              </div>
+              <div class="mt-4 flex items-center gap-4 text-sm">
+                <a class="underline underline-offset-4"
+                  href="https://github.com/SamirKaiser/Resistor-Ladders-and-Continued-Fractions-The-Golden-Ratio-and-e"
+                  target="_blank" rel="noopener noreferrer">Code</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+      <!-- Centered controls UNDER the templates (polished buttons) -->
+      <div class="mt-5 flex justify-center">
+        <div class="flex gap-3">
+          <!-- Prev -->
+          <button
+            class="projPrev relative inline-flex h-11 w-11 items-center justify-center rounded-full
+                   border border-slate-300/70 dark:border-slate-700/70
+                   bg-gradient-to-b from-white/70 to-white/40 dark:from-slate-900/60 dark:to-slate-900/30
+                   backdrop-blur supports-[backdrop-filter]:bg-white/30
+                   text-indigo-700 dark:text-indigo-300
+                   shadow-sm hover:shadow-md
+                   transition-[transform,box-shadow,filter] duration-200
+                   hover:saturate-125 active:scale-95
+                   focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500/70"
+            aria-label="Previous project" title="Previous" type="button">
+            <!-- Chevron Left -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M12.78 15.53a.75.75 0 0 1-1.06 0l-4.25-4.25a.75.75 0 0 1 0-1.06l4.25-4.25a.75.75 0 1 1 1.06 1.06L8.56 10l4.22 4.22a.75.75 0 0 1 0 1.06z" clip-rule="evenodd"/>
+            </svg>
+            <span class="pointer-events-none absolute inset-0 rounded-full ring-1 ring-inset ring-white/50 dark:ring-slate-900/40"></span>
+          </button>
+
+          <!-- Next -->
+          <button
+            class="projNext relative inline-flex h-11 w-11 items-center justify-center rounded-full
+                   border border-slate-300/70 dark:border-slate-700/70
+                   bg-gradient-to-b from-white/70 to-white/40 dark:from-slate-900/60 dark:to-slate-900/30
+                   backdrop-blur supports-[backdrop-filter]:bg-white/30
+                   text-indigo-700 dark:text-indigo-300
+                   shadow-sm hover:shadow-md
+                   transition-[transform,box-shadow,filter] duration-200
+                   hover:saturate-125 active:scale-95
+                   focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500/70"
+            aria-label="Next project" title="Next" type="button">
+            <!-- Chevron Right -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M7.22 4.47a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 1 1-1.06-1.06L11.44 10 7.22 5.78a.75.75 0 0 1 0-1.06z" clip-rule="evenodd"/>
+            </svg>
+            <span class="pointer-events-none absolute inset-0 rounded-full ring-1 ring-inset ring-white/50 dark:ring-slate-900/40"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+
+<!-- Publications -->
+
+<!-- 
+<section id="publications" class="will-reveal py-6">
+  <h2 class="text-2xl md:text-3xl font-bold tracking-tight">Publications &amp; Preprints</h2>
+  <p class="mt-4 w-full max-w-none  leading-relaxed text-slate-700 dark:text-slate-300">
+    Briefly describe your background and what you want to work on during your PhD. Mention your current institution,
+    advisor(s), and any labs or groups you're part of. State your long-term research goals in 2–4 sentences.
+  </p>
+
+  <div class="mt-6 overflow-hidden rounded-3xl border border-slate-200 dark:border-slate-800 bg-white/25 dark:bg-slate-950/25 backdrop-blur">
+    <ol class="divide-y divide-slate-200/70 dark:divide-slate-800/70">
+      <li class="p-5 md:p-6">
+        <div class="flex flex-col gap-1">
+          <div class="text-slate-900 dark:text-slate-100">
+            <span class="font-semibold">Your Lastname, Firstname</span>, Coauthors.
+            <em>Paper Title</em>. Venue, Year.
+          </div>
+          <div class="text-sm text-slate-600 dark:text-slate-300">
+            <a class="underline decoration-dotted underline-offset-4 hover:text-indigo-700 dark:hover:text-indigo-300" href="#">PDF</a> ·
+            <a class="underline decoration-dotted underline-offset-4 hover:text-indigo-700 dark:hover:text-indigo-300" href="#">DOI</a> ·
+            <a class="underline decoration-dotted underline-offset-4 hover:text-indigo-700 dark:hover:text-indigo-300" href="#">BibTeX</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="p-5 md:p-6">
+        <div class="flex flex-col gap-1">
+          <div class="text-slate-900 dark:text-slate-100">
+            <span class="font-semibold">Your Lastname, Firstname</span>.
+            <em>Preprint Title</em>. arXiv:1234.5678 (Year).
+          </div>
+          <div class="text-sm text-slate-600 dark:text-slate-300">
+            <a class="underline decoration-dotted underline-offset-4 hover:text-indigo-700 dark:hover:text-indigo-300" href="#">arXiv</a>
+          </div>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+-->
+
+<!-- Two-Particle Energy Collision (transparent background) -->
+<div class="wrap">
+  <canvas id="collision" class="visual" width="1180" height="260"
+    aria-label="Collision Burst → Fireworks → Attract → Fade"></canvas>
+</div>
+
+<style>
+  /* Make the animation blend with section background */
+  canvas.visual {
+    display: block;
+    width: 100%;
+    height: auto;
+    background: transparent !important; /* remove solid black box */
+  }
+</style>
+
+
+
+<!-- Collaboration + Contact (combined, centered) -->
+<section id="collaboration" class="will-reveal py-12 md:py-16">
+  <div class="mx-auto max-w-6xl px-6 md:px-8 text-center">
+    <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight">
+      Collaboration &amp; Get in Touch
+    </h2>
+
+<p class="mt-4 text-lg text-slate-700 dark:text-slate-300">
+  I’m personally interested in exploring scientific and mathematical ideas — from exploratory prototypes
+  and numerical experiments to refining concepts that might one day become publishable work.
+  This website is a personal, non-commercial space where I share projects and open questions that I find intriguing.
+  If something here resonates with you, feel free to connect or exchange thoughts via
+  <a
+    href="https://github.com/SamirKaiser"
+    class="text-blue-700 dark:text-blue-300 hover:text-blue-500 dark:hover:text-blue-400 no-underline"
+    style="text-decoration: none;"
+  >GitHub</a>
+</p>
+
+
+
+    <!-- Areas of collaboration -->
+    <ul class="mt-6 flex flex-wrap justify-center gap-2">
+      <li class="rounded-full border border-slate-200 dark:border-slate-800 px-3 py-1 text-sm text-slate-700 dark:text-slate-300">Numerical simulation</li>
+      <li class="rounded-full border border-slate-200 dark:border-slate-800 px-3 py-1 text-sm text-slate-700 dark:text-slate-300">Dynamical systems</li>
+      <li class="rounded-full border border-slate-200 dark:border-slate-800 px-3 py-1 text-sm text-slate-700 dark:text-slate-300">Optimization &amp; control</li>
+      <li class="rounded-full border border-slate-200 dark:border-slate-800 px-3 py-1 text-sm text-slate-700 dark:text-slate-300">Scientific computing</li>
+      <li class="rounded-full border border-slate-200 dark:border-slate-800 px-3 py-1 text-sm text-slate-700 dark:text-slate-300">Machine Learning</li>
+    </ul>
+
+
+</section>
+</main>
+
+
+
+
+<footer class="relative z-10 mx-auto max-w-6xl px-4 py-10 text-sm text-slate-600 dark:text-slate-400">
+  <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+    <p>© <span id="year"></span> Samir Mani Kaiser — All rights reserved.</p>
+
+    <!-- Legal links -->
+    <nav class="flex flex-wrap items-center gap-x-4 gap-y-2 no-print">
+      <button
+        type="button"
+        class="text-slate-600 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 transition-colors duration-200"
+        data-modal-open="privacy">Datenschutz / Privacy</button>
+      <button
+        type="button"
+        class="text-slate-600 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 transition-colors duration-200"
+        data-modal-open="disclaimer">Haftungsausschluss / Disclaimer</button>
+    </nav>
+  </div>
+
+  <!-- Modal -->
+  <div id="legal-modal"
+       class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 sm:p-6 md:p-8"
+       role="dialog" aria-modal="true" aria-labelledby="legal-title" aria-hidden="true">
+    <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm" data-modal-close></div>
+
+    <div class="relative z-10 w-full max-w-3xl rounded-xl bg-white p-6 shadow-2xl ring-1 ring-slate-900/10 dark:bg-slate-900 dark:ring-slate-200/10">
+      <h2 id="legal-title" class="sr-only"></h2>
+
+      <!-- Close button -->
+      <button type="button"
+        class="absolute top-3 right-3 rounded-md p-2 text-slate-500 hover:bg-slate-100 hover:text-slate-800 dark:hover:bg-slate-800 dark:hover:text-slate-200"
+        aria-label="Close" data-modal-close>✕</button>
+
+      <div id="legal-content" class="prose prose-slate max-h-[75vh] overflow-y-auto text-sm dark:prose-invert">
+        <!-- content injected dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Templates -->
+  <template id="tpl-privacy">
+    <section>
+      <h4 class="mt-0 mb-4 text-2xl font-semibold text-slate-900 dark:text-slate-100">Datenschutz / Privacy Policy</h4>
+      <div class="space-y-3">
+        <p>Diese Website erhebt keine personenbezogenen Daten, verwendet keine Cookies und führt keine Nutzungsanalyse durch.
+        Der Hosting-Dienst (GitHub Pages) kann technische Logdaten (z.&nbsp;B. IP-Adresse, Zeitpunkt, Browsertyp) zur Bereitstellung und Sicherheit verarbeiten. Diese Daten werden nach den Richtlinien von GitHub gelöscht.</p>
+
+        <hr class="my-4 border-slate-300 dark:border-slate-700">
+
+        <p>This website does not collect personal data, use cookies, or perform analytics.
+        The hosting provider (GitHub Pages) may process technical log data (e.g. IP address, time, browser type) for security and operational purposes. Such data are deleted in accordance with GitHub’s policies.</p>
+      </div>
+    </section>
+  </template>
+
+  <template id="tpl-disclaimer">
+    <section>
+      <h4 class="mt-0 mb-4 text-2xl font-semibold text-slate-900 dark:text-slate-100">Haftungsausschluss / Disclaimer</h4>
+      <div class="space-y-3">
+        <p>Diese Website ist ein persönliches, nicht-kommerzielles Projekt zur Darstellung eigener Arbeiten und Ideen. 
+        Es werden keine geschäftlichen Leistungen angeboten und keine personenbezogenen Daten erhoben.</p>
+        <p>Die Inhalte wurden mit größter Sorgfalt erstellt, es kann jedoch keine Gewähr für Richtigkeit, Vollständigkeit und Aktualität übernommen werden. 
+        Diese Website enthält Links zu externen Seiten Dritter, auf deren Inhalte kein Einfluss besteht. 
+        Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter verantwortlich.</p>
+
+        <hr class="my-4 border-slate-300 dark:border-slate-700">
+
+        <p>This website is a personal, non-commercial project presenting individual work and ideas. 
+        No commercial services are offered and no personal data are collected.</p>
+        <p>The content has been created with care, but accuracy, completeness, and timeliness cannot be guaranteed. 
+        This site includes links to external third-party websites; responsibility for their content lies solely with their operators.</p>
+      </div>
+    </section>
+  </template>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Import map + shim so modules resolve in sandboxed environments -->
+<script async src="https://unpkg.com/es-module-shims@1.10.0/dist/es-module-shims.js"></script>
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://unpkg.com/three@0.161.0/build/three.module.js",
+    "three/addons/": "https://unpkg.com/three@0.161.0/examples/jsm/"
+  }
+}
+</script>
+
+
+<script type="module" src="script.js"></script>
+
+
+
+</body>
+</html>
+
+
+
