@@ -1,36 +1,4 @@
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 (() => {
   const els = document.querySelectorAll('.pause-when-offscreen');
   if (!els.length) return;
@@ -582,10 +550,10 @@ function createAnimationLoop({ el, fps = 30, tick }) {
   if (!canvas) return;
 
   // ==== knobs (safe to tweak) ====
-  const TARGET_FPS_DESKTOP = 40;   // you set this
-  const TARGET_FPS_MOBILE  = 24;
-  const MAX_PARTS_DESKTOP  = 2000; // you set this
-  const MAX_PARTS_MOBILE   = 900;
+  const TARGET_FPS_DESKTOP = 30;   // you set this
+  const TARGET_FPS_MOBILE  = 16;
+  const MAX_PARTS_DESKTOP  = 1400; // you set this
+  const MAX_PARTS_MOBILE   = 500;
   const GRID_BASE_X        = 64;
   const GRID_BASE_Y        = 32;
   const FIELD_UPDATE_EVERY = 2;    // recompute noise field every N frames
