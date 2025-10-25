@@ -1,0 +1,177 @@
+    /* Basic print styles */
+    @media print {
+      nav, .no-print { display: none !important; }
+      body { font-size: 12pt; }
+      a { color: black; text-decoration: none; }
+      section { page-break-inside: avoid; }
+    }
+
+    /* Hide scrollbars for the project track */
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+    /* Subtle math grid background (stays *under* the Lorenz canvas) */
+    .bg-math-grid {
+      background-image:
+        linear-gradient(to right, rgba(100,116,139,0.12) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(100,116,139,0.12) 1px, transparent 1px);
+      background-size: 24px 24px;
+    }
+
+    .accent-ring { box-shadow: 0 0 0 3px rgba(79,70,229,0.15); }
+
+    .will-reveal {
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .will-reveal.is-visible {
+    opacity: 1;
+    transform: none;
+    }
+
+  
+    /* ← EDIT THESE COLORS */
+        /* Light background */
+      .site-bg {
+            background-color: #dee7f5; /* slightly deeper base */
+            background-image:
+              radial-gradient(1200px 800px at 15% 20%, rgba(140, 190, 255, 0.55), transparent 25%), /* brighter, more visible lightblue glow */
+              radial-gradient(1000px 700px at 90% 75%, rgba(160, 180, 255, 0.45), transparent 25%), /* more defined bluish-gray vignette */
+              linear-gradient(180deg, #f8fbff 0%, #e4ecf8 55%, #ced9f1 100%); /* stronger vertical gradient contrast */
+            background-size: cover;
+            background-attachment: fixed;
+          }
+
+
+
+        /* Dark mode version (if you use the moon toggle) */
+        .dark .site-bg {
+          background-color: #0b1220; /* ← change me (solid base for dark) */
+          background-image:
+            radial-gradient(1200px 800px at 15% 20%, rgba(34,211,238,0.12), transparent 20%), /* ← change/keep */
+            radial-gradient(1000px 700px at 90% 75%, rgba(129,140,248,0.10), transparent 20%), /* ← change/keep */
+            linear-gradient(180deg, #0f172a 0%, #0b1220 55%, #05080f 100%); /* ← change/keep */
+          background-size: cover;
+          background-attachment: fixed;
+        }
+
+        /*animation style */
+        @keyframes slowspin { to { transform: rotate(360deg); } }
+        .orb { animation: slowspin 18s linear infinite; transform-origin: 50% 50%; }
+        .orb-line { stroke: currentColor; stroke-width: 1.25; fill: none; opacity: .6; }
+        @media (prefers-reduced-motion: reduce) { .orb { animation: none; } }
+
+  #flow{
+  background: transparent !important;
+  box-shadow: none !important;
+  mix-blend-mode: normal;         /* avoid CSS blend with the page bg */
+  filter: none !important;        /* belt & suspenders */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Remove dotted underline from links inside prose blocks */
+.prose a {
+  text-decoration: none !important;
+}
+
+.prose a:hover {
+  text-decoration: none !important;
+  color: #4338ca; /* Tailwind indigo-700 */
+}
+
+.dark .prose a:hover {
+  color: #818cf8; /* Tailwind indigo-400 */
+}
+
+
+
+
+
+
+
+
+
+/* Make the modal image display in a consistent frame */
+/* The fixed frame that defines size & ratio */
+#heroGalleryFrame {
+  aspect-ratio: 4 / 3;          /* consistent frame; change to 3/4 for vertical, 1/1 for square */
+  width: 100%;
+  max-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* The image fits perfectly inside the frame */
+#heroGalleryModal {
+  transition: opacity 0.4s ease;
+  padding: 2rem;
+}
+
+#heroGalleryFrame {
+  aspect-ratio: 16 / 9;       /* wider cinematic frame */
+  width: 100%;
+  max-width: 90vw;
+  max-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 1rem;
+  background-color: rgba(0, 0, 0, 0.0);
+}
+
+#heroGalleryImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: opacity 0.5s ease-in-out;
+  cursor: pointer;            /* indicates clickable zones */
+  user-select: none;
+}
+
+/* Shared gallery button style */
+.hero-nav-btn {
+  min-width: 140px;                 /* ✅ ensures same width */
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  background-color: rgba(30, 41, 59, 0.6); /* slate-800/60 */
+  color: #b6d1ec;                   /* slate-100 */
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-align: center;
+  transition: background-color 0.25s ease, transform 0.2s ease;
+}
+
+/* Hover + active states */
+.hero-nav-btn:hover {
+  background-color: rgba(51, 65, 85, 0.8); /* slate-700/80 */
+  transform: translateY(-2px);
+}
+
+.hero-nav-btn:active {
+  transform: translateY(0);
+}
+
+/* Hide known animation wrappers on mobile (visual removal; JS already deletes them) */
+html.no-anim #hero,
+html.no-anim #AboutAnim,
+html.no-anim #collision,
+html.no-anim #flower,
+html.no-anim #flow { display: none !important; }
+
+html.no-anim .wrap:has(#hero),
+html.no-anim .wrap:has(#collision),
+html.no-anim .center-wrap:has(#flower),
+html.no-anim #about:has(#AboutAnim),
+html.no-anim .overflow-hidden:has(#flow) { display: none !important; }
+
