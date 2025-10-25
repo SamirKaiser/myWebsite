@@ -1,4 +1,5 @@
 
+
 (() => {
   const els = document.querySelectorAll('.pause-when-offscreen');
   if (!els.length) return;
@@ -381,7 +382,17 @@ function stop(){
 }
 
 // --------- Reduced motion: draw once & stop ----------
-if (PREFERS_REDUCED) {
+if (PREFERS_REDUCED || isMobile) {
+  // On mobile (or reduced motion), render a single nice frame and do not start the loop
+  if (!PREFERS_REDUCED && isMobile) {
+    const steps = 48;
+    for (let i = 0; i < steps; i++) {
+      world.rotation.y += UI.orbitSpeed * (1/60);
+      updateAgent(sgd, stepSGD);
+      updateAgent(mom, stepMomentum);
+      updateAgent(adam, stepAdam);
+    }
+  }
   renderer.render(scene, camera);
 } else {
   updateRunState();
@@ -550,10 +561,10 @@ function createAnimationLoop({ el, fps = 30, tick }) {
   if (!canvas) return;
 
   // ==== knobs (safe to tweak) ====
-  const TARGET_FPS_DESKTOP = 30;   // you set this
-  const TARGET_FPS_MOBILE  = 16;
-  const MAX_PARTS_DESKTOP  = 1400; // you set this
-  const MAX_PARTS_MOBILE   = 500;
+  const TARGET_FPS_DESKTOP = 40;   // you set this
+  const TARGET_FPS_MOBILE  = 24;
+  const MAX_PARTS_DESKTOP  = 2000; // you set this
+  const MAX_PARTS_MOBILE   = 900;
   const GRID_BASE_X        = 64;
   const GRID_BASE_Y        = 32;
   const FIELD_UPDATE_EVERY = 2;    // recompute noise field every N frames
@@ -670,7 +681,38 @@ function createAnimationLoop({ el, fps = 30, tick }) {
   const QUALITY_GROW = 1.05;        // grow back gently
   const MIN_PARTS = Math.max(400, Math.floor(MAX_PARTS * 0.35));
 
-  // ======= Visibility control =======
+  
+  // ---- Strong mobile optimization: draw a single static composition and stop ----
+  if (isMobile) {
+    try {
+      updateField(performance.now ? performance.now() : Date.now());
+      ctx.save();
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.clearRect(0, 0, W, H);
+      ctx.globalCompositeOperation = 'lighter';
+      ctx.lineWidth = 1;
+      const samples = Math.min(1800, Math.max(700, Math.floor(W * H / 700))); // density scales with size
+      const L = matchMedia('(prefers-color-scheme: light)').matches ? 46 : 70;
+      for (let i = 0; i < samples; i++) {
+        const x = Math.random() * W;
+        const y = Math.random() * H;
+        const v = sampleField(x, y);
+        const len = 10 + Math.random() * 22;
+        const hue = 210 + 50 * Math.sin((x + y) * 0.0016);
+        ctx.beginPath();
+        ctx.moveTo(x, y);
+        ctx.lineTo(x + v.vx * len, y + v.vy * len);
+        ctx.strokeStyle = `hsl(${(hue|0)} 70% ${L}%)`;
+        ctx.stroke();
+      }
+      ctx.restore();
+    } catch (e) {
+      console.warn('[flow] static composition failed:', e);
+    }
+    return; // stop here on mobile: show static frame only
+  }
+
+// ======= Visibility control =======
   let lastRAF = 0, lastTick = 0, frameCount = 0;
 
   const io = new IntersectionObserver((entries)=>{
@@ -1899,3 +1941,63 @@ document.addEventListener("keydown", (e) => {
   if (e.key === "ArrowRight") heroShowNext();
   if (e.key === "ArrowLeft") heroShowPrev();
 });
+
+
+// ===== Lightweight Mobile Snapshots (non-invasive) =====
+(function(){
+  try {
+    const isMobile = /Mobi|Android/i.test(navigator.userAgent) || (navigator.userAgentData?.mobile ?? false);
+    if (!isMobile) return;
+
+    function replaceCanvasWithImage(canvas, dataURL, altText){
+      try {
+        if (!canvas || typeof canvas.toDataURL !== 'function') return;
+        const img = new Image();
+        img.src = dataURL;
+        img.alt = altText || canvas.getAttribute('aria-label') || '';
+        img.className = canvas.className || '';
+        img.style.cssText = canvas.style.cssText || '';
+        const wAttr = canvas.getAttribute('width');
+        const hAttr = canvas.getAttribute('height');
+        if (wAttr) img.setAttribute('width', wAttr);
+        if (hAttr) img.setAttribute('height', hAttr);
+        if (!img.style.display) img.style.display = 'block';
+        canvas.replaceWith(img);
+      } catch(err) {
+        console.warn('[mobile-snapshot] replace failed:', err);
+      }
+    }
+
+    function snapshot(id, alt){
+      const c = document.getElementById(id);
+      if (!c || typeof c.toDataURL !== 'function') return;
+      try {
+        const url = c.toDataURL('image/webp', 0.9);
+        replaceCanvasWithImage(c, url, alt);
+      } catch (e) {
+        console.warn('[mobile-snapshot] toDataURL failed for #' + id + ':', e);
+      }
+    }
+
+    // Wait for first frames to render, then snapshot both canvases
+    // Using a small delay after a RAF keeps the content identical to live view.
+    const doSnap = () => {
+      // Flow background
+      snapshot('flow', 'Flow static preview');
+      // 3D hero
+      snapshot('hero', '3D optimizer static preview');
+      // pause 3D loop if public API exists, to save battery
+      try { window.opt3D && typeof window.opt3D.pause === 'function' && window.opt3D.pause(); } catch(_){}
+    };
+
+    if (document.readyState === 'complete' || document.readyState === 'interactive') {
+      requestAnimationFrame(() => setTimeout(doSnap, 220));
+    } else {
+      window.addEventListener('DOMContentLoaded', () => requestAnimationFrame(() => setTimeout(doSnap, 220)), { once: true });
+    }
+  } catch(e){
+    console.warn('[mobile-snapshot] block error:', e);
+  }
+})();
+// ===== End Lightweight Mobile Snapshots =====
+
