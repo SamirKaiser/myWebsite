@@ -103,6 +103,7 @@
       <!-- Desktop nav -->
       <nav class="hidden md:flex items-center gap-6 text-slate-900 dark:text-white">
         <a href="#about" class="hover:text-indigo-700 dark:hover:text-indigo-300">About</a>
+        <a href="#publications" class="hover:text-indigo-700 dark:hover:text-indigo-300">Publications & Preprints</a>
         <a href="#projects" class="hover:text-indigo-700 dark:hover:text-indigo-300">Projects</a>
         <a href="#collaboration" class="hover:text-indigo-700 dark:hover:text-indigo-300">Collaboration & Get in Touch</a>
         <!-- external links -->
@@ -177,7 +178,8 @@
   <!-- Mobile menu -->
   <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950">
     <nav class="max-w-6xl mx-auto px-4 py-3 flex flex-col gap-3">
-      <a href="#about" class="hover:text-indigo-700 dark:hover:text-indigo-300">About</a>
+      <a href="#about_mobile" class="hover:text-indigo-700 dark:hover:text-indigo-300">About</a>
+      <a href="#publications" class="hover:text-indigo-700 dark:hover:text-indigo-300">Publications & Preprints</a>
       <a href="#projects" class="hover:text-indigo-700 dark:hover:text-indigo-300">Projects</a>
       <a href="#collaboration" class="hover:text-indigo-700 dark:hover:text-indigo-300">Collaboration & Get in Touch</a>
       <!-- external links -->
@@ -357,7 +359,7 @@
 
 
 <!-- About -->
-<section class="will-reveal py-12 border-slate-200 dark:border-slate-800">
+<section id="about_mobile" class="will-reveal py-12 border-slate-200 dark:border-slate-800">
   <h2 class="text-2xl md:text-3xl font-bold tracking-tight">About</h2>
   <p class="mt-4 w-full max-w-none leading-relaxed text-slate-700 dark:text-slate-300">
     I am Samir Mani Kaiser, a Master’s graduate in Mathematics at the Technical University of Berlin, specializing in numerical analysis, optimization, and machine learning. My academic background focuses on the application of mathematical methods to computational science and dynamical systems.
@@ -404,6 +406,41 @@
   </div>
 
 </section>
+
+
+
+<!-- Publications -->
+<section id="publications" class="will-reveal py-6">
+  <h2 class="text-2xl md:text-3xl font-bold tracking-tight">Publications &amp; Preprints</h2>
+  <p class="mt-4 w-full max-w-none leading-relaxed text-slate-700 dark:text-slate-300">
+    This section lists my research publications and preprints, reflecting ongoing work and collaborations in the areas of machine learning, dynamical systems, and applied mathematics.
+  </p>
+
+  <ol class="list-none m-0 p-0 mt-6">
+    <!-- Your arXiv preprint (APA style, entire reference as link) -->
+    <li class="p-5 md:p-6">
+      <div class="flex flex-col gap-2">
+        <div class="text-slate-900 dark:text-slate-100 font-semibold text-lg italic">
+          When do world models successfully learn dynamical systems?
+        </div>
+        <div class="text-slate-900 dark:text-slate-100">
+          Ross, E., Drygala, C., Schwarz, L., Kaiser, S., di Mare, F., Breiten, T., &amp; Gottschalk, H. (2025).
+        </div>
+        <div>
+          <a class="underline-offset-4 hover:text-indigo-700 dark:hover:text-indigo-300 no-underline text-slate-900 dark:text-slate-100" 
+             href="https://arxiv.org/abs/2507.04898" 
+             target="_blank" 
+             rel="noopener noreferrer">
+            <em>arXiv preprint</em> arXiv:2507.04898.
+          </a>
+        </div>
+      </div>
+    </li>
+  </ol>
+</section>
+
+
+
 
 <!-- Projects -->
 <section id="projects" class="scroll-mt-24 py-12  border-slate-200 dark:border-slate-800 will-reveal">
@@ -839,47 +876,6 @@ I build numerical simulations, algorithms, and small tools in Python and Rust, w
   </section>
 </section>
 
-<!-- Publications -->
-
-<!-- 
-<section id="publications" class="will-reveal py-6">
-  <h2 class="text-2xl md:text-3xl font-bold tracking-tight">Publications &amp; Preprints</h2>
-  <p class="mt-4 w-full max-w-none  leading-relaxed text-slate-700 dark:text-slate-300">
-    Briefly describe your background and what you want to work on during your PhD. Mention your current institution,
-    advisor(s), and any labs or groups you're part of. State your long-term research goals in 2–4 sentences.
-  </p>
-
-  <div class="mt-6 overflow-hidden rounded-3xl border border-slate-200 dark:border-slate-800 bg-white/25 dark:bg-slate-950/25 backdrop-blur">
-    <ol class="divide-y divide-slate-200/70 dark:divide-slate-800/70">
-      <li class="p-5 md:p-6">
-        <div class="flex flex-col gap-1">
-          <div class="text-slate-900 dark:text-slate-100">
-            <span class="font-semibold">Your Lastname, Firstname</span>, Coauthors.
-            <em>Paper Title</em>. Venue, Year.
-          </div>
-          <div class="text-sm text-slate-600 dark:text-slate-300">
-            <a class="underline decoration-dotted underline-offset-4 hover:text-indigo-700 dark:hover:text-indigo-300" href="#">PDF</a> ·
-            <a class="underline decoration-dotted underline-offset-4 hover:text-indigo-700 dark:hover:text-indigo-300" href="#">DOI</a> ·
-            <a class="underline decoration-dotted underline-offset-4 hover:text-indigo-700 dark:hover:text-indigo-300" href="#">BibTeX</a>
-          </div>
-        </div>
-      </li>
-
-      <li class="p-5 md:p-6">
-        <div class="flex flex-col gap-1">
-          <div class="text-slate-900 dark:text-slate-100">
-            <span class="font-semibold">Your Lastname, Firstname</span>.
-            <em>Preprint Title</em>. arXiv:1234.5678 (Year).
-          </div>
-          <div class="text-sm text-slate-600 dark:text-slate-300">
-            <a class="underline decoration-dotted underline-offset-4 hover:text-indigo-700 dark:hover:text-indigo-300" href="#">arXiv</a>
-          </div>
-        </div>
-      </li>
-    </ol>
-  </div>
-</section>
--->
 
 <!-- Two-Particle Energy Collision (transparent background) -->
 <div class="wrap">
@@ -1009,28 +1005,6 @@ I build numerical simulations, algorithms, and small tools in Python and Rust, w
     </section>
   </template>
 </footer>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
