@@ -1,36 +1,4 @@
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 (() => {
   const els = document.querySelectorAll('.pause-when-offscreen');
   if (!els.length) return;
